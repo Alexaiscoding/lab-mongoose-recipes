@@ -1,14 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const data= require('../data.json')
 
 // connect to the databasse:
-
-mongoose.connect('mongodb://localhost/recipeApp'
-  .then(() => { console.log('Connected to Mongo!')
-  .catch((err) => { console.log('An error happened:', err) }
-  )
-
 
 const recipeSchema = new Schema({
 
@@ -24,11 +17,6 @@ const recipeSchema = new Schema({
     created: {type:Date ,default: Date.now}
 
 });
-
-
-
-
-
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
 
